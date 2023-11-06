@@ -12,7 +12,10 @@
 public class Solution {
     public bool HasCycle(ListNode head) {
         // Declare a processing List to store previous visited nodes
-        List<ListNode> previousNodes = new List<ListNode>();
+        //List<ListNode> previousNodes = new List<ListNode>();
+
+        // Declare a Hash Set to store previous visited nodes as it is much better for the application
+        HashSet<ListNode> previousNodes = new HashSet<ListNode>();
         
         // Keep iterating through the list until the end is reached
         while (head != null )
