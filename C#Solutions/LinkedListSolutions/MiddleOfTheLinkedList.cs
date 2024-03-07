@@ -11,25 +11,16 @@
  */
 public class Solution {
     public ListNode MiddleNode(ListNode head) {
-        // Initialize a length counter
-        int length = 0;
-        // Create a temporary list pointer and iterate through the list
+        // Create a new head pointer for the linked list
         ListNode temp = head;
-        while(temp != null)
+        // Iterate through the list checking that the current and next node are valid
+        while(temp != null && temp.next != null)
         {
-            // For each node count the length
-            length++;
-            temp = temp.next;
-        }
-        // Find the middle index and iterate through the list
-        length = length/2;
-        while(length>0)
-        {
+            // Traverse the list iterating to the end of the temp list at twice the speed
             head = head.next;
-            length--;
+            temp = temp.next.next;
         }
-
-        // When the middle node is reached return the list
+        // When the end of the temp list is reached, the main list will be halfway
         return head;
     }
 }
