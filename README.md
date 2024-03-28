@@ -1,2 +1,2 @@
 # CodingProblemSolutions
-HackerRank / LeetCode / Exercism Coding solutions
+My LeetCode problem solutions using various programming languages.
