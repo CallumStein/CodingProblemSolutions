@@ -1,7 +1,14 @@
 public class Solution {
     
-    // Approach using arithematic approach with conditionals
+    // Faster approach of arithematic approach using Math.Sum() function
     public int MissingNumber(int[] nums) {
+        // Calculate the difference between the expected sum of all numbers minus the actual sum
+        int n = nums.Length;
+        return (n * (n + 1) / 2) - nums.Sum();
+    }
+
+    // Approach using arithematic approach with conditionals
+    public int MissingNumberArithematic(int[] nums) {
         // Calculate the expected sum of all numbers between 0 and n
         int n = nums.Length;
         int sum = n * (n + 1) / 2;
